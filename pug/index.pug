@@ -1,0 +1,39 @@
+doctype html
+html
+
+	head
+		meta(charset='utf-8')
+		title
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Ubuntu:400,700")
+		link(rel='stylesheet', href='css/style.css')
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+
+	body
+		.w-page
+			p.info ООО &laquo;Научно-образовательный проект&raquo; ИНН: 7825706086 ОГРН: 1037843023734
+			form.form#mainForm(action="http://studentlanduge.ru/test/action.php", method="post")
+				.form__wrapper
+					.form__container
+						h1.form__caption Поможем все решить - недорого
+						.form__inner
+							.form__task
+								textarea#task.form__textarea(placeholder="Напишите задание", name="task", rows="4", required)
+								p.form__field-error Неверно заполнено поле
+								input(type="file", name="files", multiple).form__files#files
+								label.form__files-label(for="files") + добавить файлы (до 5 мб)
+								p.form__files-error Размер файла превышает 5 мб
+							input(type="email", placeholder="E-mail", name="email", required).form__field#email
+							p.form__field-error Неверно заполнено поле
+							input(type="tel", placeholder="Телефон", name="phone", required).form__field#phone
+							p.form__field-error Неверно заполнено поле
+						input(type="hidden", name="PartnerId", value="11594")
+						button(type="submit").form__submit Отправить решение
+							svg(width='64', version='1.1', xmlns='http://www.w3.org/2000/svg', height='64', viewBox='0 0 64 64')
+								g
+									path(d='M44.152,32.024L15.824,60.353c-0.787,0.787-0.787,2.062,0,2.849c0.394,0.394,0.909,0.59,1.424,0.59   c0.515,0,1.031-0.196,1.424-0.59l29.736-29.736c0.557-0.557,0.718-1.439,0.445-2.177c-0.101-0.272-0.26-0.519-0.464-0.725   L18.652,0.828c-0.787-0.787-2.062-0.787-2.848,0c-0.787,0.787-0.787,2.061,0,2.848L44.152,32.024z')
+		script(src="js/common.js")
+		script(src="js/jquery.maskedinput.min.js")
+
+	

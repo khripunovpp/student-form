@@ -1,0 +1,206 @@
+@import "bourbon"
+@import "mixins"
+
+$font: 'Ubuntu', sans-serif
+
+html
+	box-sizing: border-box
+	height: 100%
+
+*,
+*::after,
+*::before
+	box-sizing: inherit
+	outline: none
+
+@include placeholder()
+  color: #7b7b7b
+
+body
+	margin: 0	
+	overflow-x: hidden
+	font-family: $font
+	line-height: 1.4
+	font-size: 14px
+	height: 100%
+
+img
+	max-width: 100%	
+	border: none	
+	outline: none	
+
+a
+	border: none	
+	outline: none	
+
+ul
+	list-style-type: none	
+	margin: 0	
+	padding: 0
+
+select::-ms-expand
+	display: none
+
+%container
+	width: 100%
+	max-width: 970px	
+	padding: 0 15px
+	margin: 0 auto
+
+%grid
+	display: table
+	width: 100%
+	table-layout: fixed
+
+%part
+	display: table-cell
+	vertical-align: top
+
+.container
+	@extend %container
+
+.w-page
+	background-color: #dae4db
+	background-image: linear-gradient(to bottom, #dae4db, #fff)
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	overflow: auto
+
+.info
+	text-align: center
+	color: #b5bab4
+	font-size: 9px
+	padding: 0 15px
+	margin: 15px 0
+
+.form
+	overflow: auto
+	width: 100%
+	padding: 0 15px
+	margin: 5% 0
+	&__wrapper
+		display: table
+		width: 100%
+		height: 100%
+		max-width: 400px
+		margin: 0 auto
+	&__container
+		display: table-cell
+		vertical-align: middle
+	&__caption
+		color: #9f005d
+		font-size: 28px
+		line-height: 1.3
+		margin: 0
+	&__inner
+		background-color: #fff
+		border-radius: 3px
+		padding: 20px
+		margin: 10px 0 20px
+		box-shadow: 0 0 28px rgba(#000, .17)
+	&__field
+		width: 100%
+		margin-top: 10px
+		padding: 12px 15px
+		border: 1px solid #999999
+		border-radius: 3px
+		font-size: 14px
+		transition: all .2s
+		position: relative
+		background-size: 15px
+		background-repeat: no-repeat
+		background-position: right 20px top 10px
+		&.invalid
+			border-color: #bf2932
+			background-image: url(../img/cancel.svg)
+			animation: error .3s both
+		&-error
+			font-size: 14px
+			color: #bf2932
+			margin: 5px 0 0
+			display: none
+	&__task
+		padding: 10px 15px
+		border: 1px solid #999999
+		border-radius: 3px
+		background-size: 15px
+		background-repeat: no-repeat
+		background-position: right 20px top 10px
+		&.invalid
+			border-color: #bf2932
+			background-image: url(../img/cancel.svg)
+			animation: error .3s both
+	&__textarea
+		width: 100%
+		font-family: $font
+		font-size: 14px
+		border: none
+		resize: none
+		border-bottom: 1px solid #999999
+		padding: 5px 0
+		&::-webkit-scrollbar
+			width: 3px
+			height: 5px
+		&::-webkit-scrollbar-thumb
+			background-color: #9a9a9a
+	&__files
+		display: none
+		&-name
+			color: #000
+			font-size: 14px
+			display: block
+			cursor: pointer
+			line-height: 1
+			margin: 7px 0 0
+		&-label
+			color: #7b7b7b
+			font-size: 14px
+			display: block
+			cursor: pointer
+			line-height: 1
+			margin-top: 7px
+		&-error
+			font-size: 14px
+			color: #bf2932
+			margin: 5px 0 0
+			display: none
+	&__submit
+		width: 100%
+		background-color: #9f005d
+		border-radius: 3px
+		padding: 15px 58px 15px 20px
+		color: #fff
+		font-size: 14px
+		line-height: 1
+		font-weight: 600
+		border: none
+		text-align: left
+		position: relative
+		cursor: pointer
+		transition: all .2s
+		&:focus
+		&:hover
+			background-color: darken(#9f005d, 5%)
+			svg
+				transform: translateX(5px)
+		svg
+			width: 18px
+			height: 18px
+			position: absolute
+			fill: #fff
+			top: 50%
+			margin-top: -9px
+			right: 20px
+			transition: all .2s
+
+
+@keyframes error
+	0%
+		transform: translateX(-5px)
+	50%
+		transform: translateX(5px)
+	100%
+		transform: translateX(0)

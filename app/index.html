@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="w-page">
+      <p class="info">ООО &laquo;Научно-образовательный проект&raquo; ИНН: 7825706086 ОГРН: 1037843023734</p>
+      <form class="form" id="mainForm" action="http://studentlanduge.ru/test/action.php" method="post">
+        <div class="form__wrapper">
+          <div class="form__container">
+            <h1 class="form__caption">Поможем все решить - недорого</h1>
+            <div class="form__inner">
+              <div class="form__task">
+                <textarea class="form__textarea" id="task" placeholder="Напишите задание" name="task" rows="4" required></textarea>
+                <p class="form__field-error">Неверно заполнено поле</p>
+                <input class="form__files" type="file" name="files" multiple id="files">
+                <label class="form__files-label" for="files">+ добавить файлы (до 5 мб)</label>
+                <p class="form__files-error">Размер файла превышает 5 мб</p>
+              </div>
+              <input class="form__field" type="email" placeholder="E-mail" name="email" required id="email">
+              <p class="form__field-error">Неверно заполнено поле</p>
+              <input class="form__field" type="tel" placeholder="Телефон" name="phone" required id="phone">
+              <p class="form__field-error">Неверно заполнено поле</p>
+            </div>
+            <input type="hidden" name="PartnerId" value="11594">
+            <button class="form__submit" type="submit">Отправить решение
+              <svg width="64" version="1.1" xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 0 64 64">
+                <g>
+                  <path d="M44.152,32.024L15.824,60.353c-0.787,0.787-0.787,2.062,0,2.849c0.394,0.394,0.909,0.59,1.424,0.59   c0.515,0,1.031-0.196,1.424-0.59l29.736-29.736c0.557-0.557,0.718-1.439,0.445-2.177c-0.101-0.272-0.26-0.519-0.464-0.725   L18.652,0.828c-0.787-0.787-2.062-0.787-2.848,0c-0.787,0.787-0.787,2.061,0,2.848L44.152,32.024z"></path>
+                </g>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="js/common.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+  </body>
+</html>
